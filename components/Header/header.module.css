@@ -1,0 +1,6 @@
+.container {
+  background-color: tomato;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  text-align: center;
+}

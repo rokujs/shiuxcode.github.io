@@ -1,13 +1,16 @@
 import React from "react";
 
-import Footer from "../Footer";
-import Header from "../Header";
+import Navbar from "../Navbar/Navbar";
+import Header from "../Header/Header";
 
-const Layout = () => {
+import style from "./layout.module.css";
+
+const Layout = ({ children }) => {
   return (
-    <div>
+    <div className={style.container}>
       <Header />
-      <Footer />
+      <Navbar />
+      {children}
     </div>
   );
 };
