@@ -1,0 +1,99 @@
+.card {
+  width: 30vw;
+  height: 30vh;
+  margin: 25px 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.buttonPage {
+  background-color: #454d4b88;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.buttonPage:hover {
+  animation-name: buttonCover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.buttonPage:hover > a {
+  animation-name: iconCover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.buttonPage > a {
+  text-decoration: none;
+  width: 40px;
+  color: #e6fffb;
+}
+
+.backgroundImage {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.description {
+  background: #e6fffb;
+  background: linear-gradient(#e6fffba2 0%, #e6fffb 80%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #73807d;
+  text-align: left;
+}
+
+.skills {
+  list-style-type: none;
+  display: flex;
+  padding: 0.5rem;
+}
+
+@keyframes buttonCover {
+  0% {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  100% {
+    margin: 0;
+    width: 30vw;
+    height: 30vh;
+  }
+}
+
+@keyframes iconCover {
+  0% {
+    width: 40px;
+  }
+  100% {
+    width: 30vw;
+    padding: 13vw;
+  }
+}

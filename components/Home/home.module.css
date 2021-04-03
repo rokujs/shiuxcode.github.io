@@ -1,6 +1,5 @@
 .container {
   grid-area: 2 / 2 / 3 / 3;
-  background-color: #454d4b;
   width: 100%;
   display: flex;
   justify-content: center;

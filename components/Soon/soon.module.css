@@ -1,0 +1,17 @@
+.container {
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 5rem;
+  color: #e6fffb;
+}
+
+.description {
+  color: #73807d;
+  font-size: 2rem;
+}

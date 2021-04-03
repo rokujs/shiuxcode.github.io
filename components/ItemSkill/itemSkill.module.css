@@ -1,0 +1,12 @@
+.item {
+  background-color: #73807d;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.item > span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #e6fffb;
+}

@@ -1,0 +1,31 @@
+.container {
+  background-color: #454d4b;
+  grid-area: 2 / 2 / 3 / 3;
+  width: 100%;
+  justify-self: stretch;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.header {
+  margin: 0 50px;
+}
+
+.title {
+  font-size: 5rem;
+  color: #e6fffb;
+}
+
+.description {
+  margin: 30px 0;
+  font-size: 2.4rem;
+  color: #73807d;
+  font-weight: 300;
+}
+
+.containerCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
