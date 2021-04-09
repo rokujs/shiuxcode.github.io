@@ -10,7 +10,7 @@ const skills = () => {
       <Head>
         <title>Skills</title>
       </Head>
-      <div>
+      <div className="Skills">
         {/* <h1>Skills</h1>
         <p>This page will be in 3D</p> */}
         <Soon />

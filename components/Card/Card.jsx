@@ -8,12 +8,12 @@ import style from "./card.module.css";
 import ItemSkill from "../ItemSkill/ItemSkill";
 
 const Card = (props) => {
-  const { image, title, technologies } = props;
+  const { image, title, technologies, link } = props;
 
   return (
     <div className={style.card}>
       <div className={style.buttonPage}>
-        <Link href="/">
+        <Link href={link}>
           <a>
             <FontAwesomeIcon icon={faExpand} />
           </a>
@@ -25,7 +25,7 @@ const Card = (props) => {
         className={style.backgroundImage}
       />
       <div className={style.description}>
-        <h3 className={style.title}>Name project</h3>
+        <h3 className={style.title}>{title}</h3>
         <ul className={style.skills}>
           {technologies.map((tech, id) => (
             <ItemSkill technology={tech} key={id} />

@@ -3,14 +3,8 @@ import React from "react";
 import Card from "../Card/Card";
 import style from "./portfolio.module.css";
 
-const Portfolio = () => {
-  const technologies = ["HTML", "JS"];
-  const title = "Name Project";
-  const image =
-    "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D/";
-
-  const image2 =
-    "https://images.unsplash.com/photo-1597809259188-0e5ffcbb0ba9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D/";
+const Portfolio = (props) => {
+  const { projects } = props;
 
   return (
     <div className={style.container}>
@@ -23,11 +17,15 @@ const Portfolio = () => {
         </p>
       </div>
       <div className={style.containerCards}>
-        <Card technologies={technologies} title={title} image={image} />
-        <Card technologies={technologies} title={title} image={image2} />
-        <Card technologies={technologies} title={title} image={image} />
-        <Card technologies={technologies} title={title} image={image2} />
-        <Card technologies={technologies} title={title} image={image} />
+        {projects.map((pro) => (
+          <Card
+            key={pro.id}
+            technologies={pro.technologies}
+            title={pro.title}
+            image={pro.image}
+            link={pro.link}
+          />
+        ))}
       </div>
     </div>
   );

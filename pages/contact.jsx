@@ -10,7 +10,7 @@ function contact() {
       <Head>
         <title>Contact</title>
       </Head>
-      <div>
+      <div className="Contact">
         {/* <h1>Contact me</h1> */}
         {/* <p>If you wanna get in touch, send an email to shiuxcode@gmail.com</p> */}
         <Soon />
