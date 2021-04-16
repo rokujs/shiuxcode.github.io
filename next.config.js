@@ -8,7 +8,7 @@ module.exports = {
       },
       {
         source: "/portfolio",
-        destination: "/Projects",
+        destination: "/projects",
         permanent: true,
       },
     ];

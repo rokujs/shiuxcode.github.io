@@ -1,0 +1,66 @@
+.container {
+  grid-area: 2 / 2 / 3 / 3;
+  padding-top: 50px;
+}
+
+.title {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #e6fffb;
+}
+
+.image {
+  text-align: center;
+  margin: 2.5vh 0;
+}
+
+.image > img {
+  width: 40vw;
+  border-radius: 10px;
+}
+
+.btn_container {
+  background-color: #e6fffb;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.btn__text {
+  color: #73807d;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.btn__text:hover {
+  text-decoration: underline;
+}
+
+.skills {
+  margin: 25px;
+}
+
+.skills_items {
+  list-style: none;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.description {
+  padding: 1.5rem;
+  background-color: #807673;
+  border-radius: 10px;
+}
+
+.description > p {
+  font-size: 1.8rem;
+  color: #e6fffb;
+}

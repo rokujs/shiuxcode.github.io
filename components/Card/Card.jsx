@@ -8,12 +8,12 @@ import style from "./card.module.css";
 import ItemSkill from "../ItemSkill/ItemSkill";
 
 const Card = (props) => {
-  const { image, title, technologies, link } = props;
+  const { image, title, technologies, id } = props;
 
   return (
     <div className={style.card}>
       <div className={style.buttonPage}>
-        <Link href={link}>
+        <Link href={`/projects/${id}`}>
           <a>
             <FontAwesomeIcon icon={faExpand} />
           </a>
