@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <Layout>
       <Head>
-        <title>ShiuxCode</title>
+        <title>roku js</title>
       </Head>
 
       <Navbar />

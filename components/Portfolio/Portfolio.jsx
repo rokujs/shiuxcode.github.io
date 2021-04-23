@@ -11,9 +11,9 @@ const Portfolio = (props) => {
       <div className={style.header}>
         <h1 className={style.title}>Portfolio</h1>
         <p className={style.description}>
-          Mis proyectos van desde páginas web hechas con React.js, JavaScript
-          vanilla con Redux.js y Node.js, y para videojuegos uso el motor Unity
-          3D. Revisa mis últimos proyectos.
+          Mis proyectos van desde páginas web creadas con React.js, JavaScript
+          vanilla y Node.js, y para videojuegos uso el motor Unity 3D. Revisa
+          mis últimos proyectos.
         </p>
       </div>
       <div className={style.containerCards}>
