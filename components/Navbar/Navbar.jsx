@@ -25,7 +25,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className={`${style.twitter} ${style.item}`}>
-        <a href="https://twitter.com/shiuxCode/" target="_blank">
+        <a href="https://twitter.com/rokujs/" target="_blank">
           <FontAwesomeIcon icon={faTwitterSquare} className={style.icon} />
           <span className={style.animation_icon}>Twitter</span>
         </a>

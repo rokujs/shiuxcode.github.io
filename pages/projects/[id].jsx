@@ -17,6 +17,7 @@ const ProjectPage = () => {
         .then((data) => setProject(data));
     }
   }, [query.id]);
+
   return (
     <Layout>
       {project == null ? null : (

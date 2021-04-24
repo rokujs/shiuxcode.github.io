@@ -6,7 +6,7 @@ import Layout from "../../components/Layout/Layout";
 import Portfolio from "../../components/Portfolio/Portfolio";
 
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:3000/api/projects/");
+  const res = await fetch(`${process.env.API}api/projects/`);
   const { data } = await res.json();
   return {
     props: {
