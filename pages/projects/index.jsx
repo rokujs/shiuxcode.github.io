@@ -1,13 +1,14 @@
 import React from "react";
 import Head from "next/head";
-import fetch from "isomorphic-unfetch";
+import Axios from "axios";
 
 import Layout from "../../components/Layout/Layout";
 import Portfolio from "../../components/Portfolio/Portfolio";
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.API}api/projects/`);
-  const { data } = await res.json();
+  const {
+    data: { data },
+  } = await Axios.get(`${process.env.API}api/projects/`);
   return {
     props: {
       projects: data,
