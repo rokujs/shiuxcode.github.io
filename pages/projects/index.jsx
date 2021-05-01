@@ -1,13 +1,13 @@
 import React from "react";
 import Head from "next/head";
 import Error from "next/error";
-import fetch from "isomorphic-unfetch";
+import Fetch from "isomorphic-unfetch";
 
 import Layout from "../../components/Layout/Layout";
 import Portfolio from "../../components/Portfolio/Portfolio";
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.API}api/projects/`);
+  const res = await Fetch(`${process.env.API}api/projects/`);
   const errorCode = res.ok ? false : res.statusCode;
   const { data } = await res.json();
 
