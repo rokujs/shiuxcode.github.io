@@ -1,21 +1,78 @@
 .container {
   grid-column: 1 / 4;
-  grid-row: 1 / 2;
-  text-align: end;
-  padding: 30px 50px 0 0;
+  grid-row: 1 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #454d4b;
+  z-index: 2;
+  display: none;
+}
+
+.container_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+}
+
+.button {
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  background: none;
+}
+
+.icon {
+  color: #e6fffb;
 }
 
 .menu {
-  font-size: 1.8rem;
+  font-size: 5rem;
 }
 
 .menu > a {
   text-decoration: none;
-  color: #e6fffb;
-  margin-right: 20px;
+  color: #73807d;
 }
 
-.menu > a:hover {
-  color: #73807d;
-  text-decoration: underline;
+.menu > a > div {
+  margin: 5rem 0;
+}
+
+/* Desktop */
+
+@media (min-width: 800px) {
+  .container {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    text-align: end;
+    display: block;
+    height: auto;
+    padding: 30px 50px 0 0;
+  }
+
+  .container_button {
+    display: none;
+  }
+
+  .menu {
+    font-size: 1.8rem;
+  }
+
+  .menu > a {
+    color: #e6fffb;
+  }
+  .menu > a:hover {
+    color: #73807d;
+    text-decoration: underline;
+  }
+
+  .menu > a > div {
+    margin: 0;
+    margin-right: 20px;
+    display: inline;
+  }
 }

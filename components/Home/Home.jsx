@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className={style.container}>
       <h1 className={style.container__home}>
-        Hola mi nombre es{" "}
+        Hola, mi nombre es{" "}
         <strong className={style.title}>
           <span className={style.first__j}>J</span>
           <span className={style.first__name}>airo </span>
