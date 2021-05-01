@@ -5,7 +5,7 @@ import Axios from "axios";
 import Layout from "../../components/Layout/Layout";
 import Portfolio from "../../components/Portfolio/Portfolio";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const {
     data: { data },
   } = await Axios.get(`${process.env.API}api/projects/`);
