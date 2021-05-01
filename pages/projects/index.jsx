@@ -9,6 +9,7 @@ import Portfolio from "../../components/Portfolio/Portfolio";
 export const getServerSideProps = async () => {
   const res = await Fetch(`${process.env.API}api/projects/`);
   const errorCode = res.ok ? false : res.statusCode;
+  console.log(res);
   const { data } = await res.json();
 
   return {
