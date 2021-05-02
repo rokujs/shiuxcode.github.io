@@ -1,8 +1,9 @@
 .container {
   background-color: #454d4b;
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 2 / 1 / 4 / 4;
   width: 100%;
   justify-self: stretch;
+  align-self: stretch;
   text-align: center;
   padding-top: 50px;
 }
@@ -12,7 +13,7 @@
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 4rem;
   color: #e6fffb;
 }
 
@@ -26,7 +27,38 @@
 .containerCards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 50px 4vw;
   align-items: center;
+}
+
+@media (min-width: 800px) {
+  .container {
+    background-color: #454d4b;
+    grid-area: 2 / 2 / 3 / 3;
+    width: 100%;
+    justify-self: stretch;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .header {
+    margin: 0 50px;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+
+  .description {
+    margin: 2rem 0;
+  }
+
+  .containerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 4vw;
+    align-items: center;
+  }
 }

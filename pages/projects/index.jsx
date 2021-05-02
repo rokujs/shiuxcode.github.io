@@ -9,7 +9,6 @@ import Portfolio from "../../components/Portfolio/Portfolio";
 export const getServerSideProps = async () => {
   const res = await Fetch(`https://www.rokujs.me/api/projects/`);
   const errorCode = res.ok ? false : res.statusCode;
-  console.log(res);
   const { data } = await res.json();
 
   return {
