@@ -1,28 +1,29 @@
 .container {
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 2 / 1 / 4 / 4;
   padding-top: 50px;
+  padding: 1.5rem;
 }
 
 .title {
   text-align: center;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   color: #e6fffb;
 }
 
 .image {
   text-align: center;
-  margin: 2.5vh 0;
+  margin: 4vh 0;
 }
 
 .image > img {
-  width: 40vw;
+  width: 80vw;
   border-radius: 10px;
 }
 
 .btn_container {
   background-color: #e6fffb;
-  width: 80px;
+  width: 70px;
   height: 40px;
   border-radius: 5px;
   display: flex;
@@ -40,12 +41,8 @@
   font-size: 2rem;
 }
 
-.btn__text:hover {
-  text-decoration: underline;
-}
-
 .skills {
-  margin: 25px;
+  margin: 1.6rem;
 }
 
 .skills_items {
@@ -63,4 +60,36 @@
 .description > p {
   font-size: 1.8rem;
   color: #e6fffb;
+}
+
+@media (min-width: 800px) {
+  .container {
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 50px 0 0 0;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .image {
+    margin: 2.5vh 0;
+  }
+
+  .image > img {
+    width: 40vw;
+  }
+
+  .btn_container {
+    width: 80px;
+  }
+
+  .btn__text:hover {
+    text-decoration: underline;
+  }
+
+  .skills {
+    margin: 2.5rem;
+  }
 }
