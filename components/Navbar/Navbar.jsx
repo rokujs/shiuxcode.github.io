@@ -13,13 +13,13 @@ const Navbar = () => {
   return (
     <div className={style.container}>
       <div className={`${style.github} ${style.item}`}>
-        <a href="https://github.com/shiuxCode/" target="_blank">
+        <a href="https://github.com/rokujs" target="_blank">
           <FontAwesomeIcon icon={faGithubSquare} className={style.icon} />
           <span className={style.animation_icon}>Github</span>
         </a>
       </div>
       <div className={`${style.linkedIn} ${style.item}`}>
-        <a href="https://www.linkedin.com/in/shiuxcode/" target="_blank">
+        <a href="https://www.linkedin.com/in/rokujs/" target="_blank">
           <FontAwesomeIcon icon={faLinkedin} className={style.icon} />
           <span className={style.animation_icon}>LinkedIn</span>
         </a>

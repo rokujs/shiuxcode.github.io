@@ -4,7 +4,7 @@ const data = {
     title: "Tic-tac-toe",
     image: "/img/tic-tac-toe.jpg",
     technologies: ["HTML", "JavaScript", "CSS"],
-    link: "https://shiuxcode.github.io/tic-tac-toe/",
+    link: "https://rokujs.github.io/tic-tac-toe/",
     description:
       "La página consiste de un videojuego hecho en canvas, donde todas las animaciones se realizan mediante código JavaScript y el fondo está hecho con una pequeña animación de onda realizada con CSS y houdini. El juego consiste en el clásico juego de Tic-tac-toe en el cual se tiene que completar una línea ya sea en vertical, horizontal o en diagonal para ganar, a su vez el juego después de cada partida va contando los puntos de cada jugador.",
   },
