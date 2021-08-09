@@ -8,7 +8,7 @@
   text-align: center;
   font-size: 4rem;
   font-weight: 700;
-  color: #e6fffb;
+  color: var(--color-primary);
 }
 
 .image {
@@ -22,7 +22,7 @@
 }
 
 .btn_container {
-  background-color: #e6fffb;
+  background-color: var(--color-primary);
   width: 70px;
   height: 40px;
   border-radius: 5px;
@@ -36,7 +36,7 @@
 }
 
 .btn__text {
-  color: #73807d;
+  color: var(--color-secondary);
   font-weight: bold;
   font-size: 2rem;
 }
@@ -59,7 +59,7 @@
 
 .description > p {
   font-size: 1.8rem;
-  color: #e6fffb;
+  color: var(--color-primary);
 }
 
 @media (min-width: 800px) {

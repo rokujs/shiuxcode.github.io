@@ -7,7 +7,7 @@
 }
 
 .buttonPage {
-  background-color: #454d4b88;
+  background-color: var(--color-bg)88;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@
 .buttonPage > a {
   text-decoration: none;
   width: 40px;
-  color: #e6fffb;
+  color: var(--color-primary);
 }
 
 .backgroundImage {
@@ -37,8 +37,8 @@
 }
 
 .description {
-  background: #e6fffb;
-  background: linear-gradient(#e6fffba2 0%, #e6fffb 80%);
+  background: var(--color-primary);
+  background: linear-gradient(var(--color-primary)a2 0%, var(--color-primary) 80%);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -53,7 +53,7 @@
 
 .title {
   font-size: 2rem;
-  color: #73807d;
+  color: var(--color-secondary);
   text-align: left;
 }
 
@@ -71,7 +71,7 @@
   }
 
   .buttonPage {
-    background-color: #454d4b88;
+    background-color: var(--color-bg)88;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +98,7 @@
   .buttonPage > a {
     text-decoration: none;
     width: 40px;
-    color: #e6fffb;
+    color: var(--color-primary);
   }
 
   .backgroundImage {
@@ -113,8 +113,8 @@
   }
 
   .description {
-    background: #e6fffb;
-    background: linear-gradient(#e6fffba2 0%, #e6fffb 80%);
+    background: var(--color-primary);
+    background: linear-gradient(var(--color-primary)a2 0%, var(--color-primary) 80%);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -129,7 +129,7 @@
 
   .title {
     font-size: 2.2rem;
-    color: #73807d;
+    color: var(--color-secondary);
     text-align: left;
   }
 

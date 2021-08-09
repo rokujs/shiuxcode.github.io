@@ -8,10 +8,10 @@
 
 .title {
   font-size: 5rem;
-  color: #e6fffb;
+  color: var(--color-primary);
 }
 
 .description {
-  color: #73807d;
+  color: var(--color-secondary);
   font-size: 2rem;
 }

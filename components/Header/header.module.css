@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
   height: 100vh;
-  background-color: #454d4b;
+  background-color: var(--color-bg);
   z-index: 2;
   display: none;
 }
@@ -27,7 +27,7 @@
 }
 
 .icon {
-  color: #e6fffb;
+  color: var(--color-primary);
 }
 
 .menu {
@@ -36,7 +36,7 @@
 
 .menu > a {
   text-decoration: none;
-  color: #73807d;
+  color: var(--color-secondary);
 }
 
 .menu > a > div {
@@ -64,10 +64,10 @@
   }
 
   .menu > a {
-    color: #e6fffb;
+    color: var(--color-primary);
   }
   .menu > a:hover {
-    color: #73807d;
+    color: var(--color-secondary);
     text-decoration: underline;
   }
 

@@ -14,7 +14,7 @@
 
 .container__home {
   font-size: 2.8rem;
-  color: #e6fffb;
+  color: var(--color-primary);
   text-align: center;
   margin-bottom: 5rem;
 }
@@ -22,7 +22,7 @@
 .title {
   background-color: #efd81d;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 5px;
   display: inline-block;
   border-radius: 10px;
 }
@@ -46,7 +46,7 @@
 .description {
   display: inline-block;
   font-size: 2rem;
-  color: #73807d;
+  color: var(--color-secondary);
 }
 
 /* desktop */
@@ -63,14 +63,14 @@
 
   .container__home {
     font-size: 3.4rem;
-    color: #e6fffb;
+    color: var(--color-primary);
     margin-bottom: 3rem;
   }
 
   .title {
     background-color: #efd81d;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px 5px;
     display: inline-block;
     border-radius: 10px;
   }
@@ -121,7 +121,7 @@
     display: inline-block;
     margin-left: 150px;
     font-size: 2.4rem;
-    color: #73807d;
+    color: var(--color-secondary);
     padding-bottom: 200px;
   }
 }
