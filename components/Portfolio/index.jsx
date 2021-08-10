@@ -1,7 +1,7 @@
 import React from "react"
 
-import Card from "../Card/Card"
-import style from "./portfolio.module.css"
+import Card from "../Card"
+import style from "./styles.module.css"
 
 const Portfolio = ({ projects }) => {
   return (

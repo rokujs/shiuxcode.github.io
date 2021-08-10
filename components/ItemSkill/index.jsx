@@ -1,6 +1,6 @@
 import React from "react"
 
-import style from "./itemSkill.module.css"
+import style from "./styles.module.css"
 
 const ItemSkill = ({ technology }) => {
   return (

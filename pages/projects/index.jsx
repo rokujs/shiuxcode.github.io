@@ -3,11 +3,11 @@ import Head from "next/head";
 import Error from "next/error";
 import Fetch from "isomorphic-unfetch";
 
-import Layout from "../../components/Layout/Layout";
-import Portfolio from "../../components/Portfolio/Portfolio";
+import Layout from "../../components/Layout";
+import Portfolio from "../../components/Portfolio";
 
-export const getServerSideProps = async () => {
-  const res = await Fetch(`https://www.rokujs.me/api/projects/`);
+export const getStaticProps = async () => {
+  const res = await Fetch(`http://localhost:3000/api/projects/`);
   const errorCode = res.ok ? false : res.statusCode;
   const { data } = await res.json();
 

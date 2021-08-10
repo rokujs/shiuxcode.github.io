@@ -29,20 +29,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .btn {
   text-decoration: none;
+  display: inline-block;
+  margin: 0 1rem;
 }
 
 .btn__text {
+  color: var(--color-purple);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.btn__code {
   color: var(--color-secondary);
   font-weight: bold;
   font-size: 2rem;
 }
 
 .skills {
-  margin: 1.6rem;
+  margin: 1.6rem .8rem;
 }
 
 .skills_items {
@@ -89,7 +98,11 @@
     text-decoration: underline;
   }
 
+  .btn__code:hover {
+    text-decoration: underline;
+  }
+
   .skills {
-    margin: 2.5rem;
+    margin: 1.5rem 2.5rem;
   }
 }

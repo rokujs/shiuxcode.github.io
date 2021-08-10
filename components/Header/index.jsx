@@ -3,7 +3,7 @@ import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
-import style from "./header.module.css"
+import style from "./styles.module.css"
 
 const Header = () => {
   const [menu, setMenu] = useState(false)

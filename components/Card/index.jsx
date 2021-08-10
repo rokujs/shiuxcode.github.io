@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExpand } from "@fortawesome/free-solid-svg-icons"
 // import Image from "next/image";
 
-import style from "./card.module.css"
-import ItemSkill from "../ItemSkill/ItemSkill"
+import style from "./styles.module.css"
+import ItemSkill from "../ItemSkill"
 
 const Card = ({ image, title, technologies, id }) => {
   return (

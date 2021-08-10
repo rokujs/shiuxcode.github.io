@@ -7,7 +7,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import style from "./navbar.module.css";
+import style from "./styles.module.css";
 
 const Navbar = () => {
   return (

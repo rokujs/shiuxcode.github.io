@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
-import Layout from "../components/Layout/Layout";
-import Soon from "../components/Soon/Soon";
+import Layout from "../components/Layout";
+import Soon from "../components/Soon";
 
 const skills = () => {
   return (

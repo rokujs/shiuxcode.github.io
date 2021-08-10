@@ -1,6 +1,6 @@
 import React from "react";
 
-import style from "./soon.module.css";
+import style from "./styles.module.css";
 
 const Soon = () => {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
 
-import Layout from "../components/Layout/Layout";
-import Home from "../components/Home/Home";
-import Navbar from "../components/Navbar/Navbar";
+import Layout from "../components/Layout";
+import Home from "../components/Home";
+import Navbar from "../components/Navbar";
 
 const HomePage = () => {
   return (

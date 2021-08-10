@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-import ItemProject from "../../components/ItemProject/ItemProject";
-import Layout from "../../components/Layout/Layout";
+import ItemProject from "../../components/ItemProject/";
+import Layout from "../../components/Layout";
 
 const ProjectPage = () => {
   const { query } = useRouter();
@@ -20,7 +20,7 @@ const ProjectPage = () => {
 
   return (
     <Layout>
-      {project == null ? null : (
+      {project && (
         <>
           <Head>
             <title>{project.title}</title>
@@ -31,6 +31,7 @@ const ProjectPage = () => {
             url={project.link}
             tech={project.technologies}
             description={project.description}
+            codeUrl={project.code}
           />
         </>
       )}
