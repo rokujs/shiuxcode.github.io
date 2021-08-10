@@ -7,7 +7,7 @@
 }
 
 .buttonPage {
-  background-color: var(--color-bg)88;
+  background-color: #454d4b88;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +38,7 @@
 
 .description {
   background: var(--color-primary);
-  background: linear-gradient(var(--color-primary)a2 0%, var(--color-primary) 80%);
+  background: linear-gradient(#e6fffba2 0%, var(--color-primary) 80%);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -71,7 +71,7 @@
   }
 
   .buttonPage {
-    background-color: var(--color-bg)88;
+    background-color: #454d4b88;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,7 +114,7 @@
 
   .description {
     background: var(--color-primary);
-    background: linear-gradient(var(--color-primary)a2 0%, var(--color-primary) 80%);
+    background: linear-gradient(#e6fffba2 0%, var(--color-primary) 80%);
     position: absolute;
     bottom: 0;
     left: 0;

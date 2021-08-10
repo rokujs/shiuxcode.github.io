@@ -7,7 +7,7 @@ import Layout from "../../components/Layout";
 import Portfolio from "../../components/Portfolio";
 
 export const getStaticProps = async () => {
-  const res = await Fetch(`http://localhost:3000/api/projects/`);
+  const res = await Fetch(`https://www.rokujs.me/api/projects/`);
   const errorCode = res.ok ? false : res.statusCode;
   const { data } = await res.json();
 
