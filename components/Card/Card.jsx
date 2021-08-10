@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExpand } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react"
+import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faExpand } from "@fortawesome/free-solid-svg-icons"
 // import Image from "next/image";
 
-import style from "./card.module.css";
-import ItemSkill from "../ItemSkill/ItemSkill";
+import style from "./card.module.css"
+import ItemSkill from "../ItemSkill/ItemSkill"
 
-const Card = (props) => {
-  const { image, title, technologies, id } = props;
-
+const Card = ({ image, title, technologies, id }) => {
   return (
     <div className={style.card}>
       <div className={style.buttonPage}>
@@ -33,7 +31,7 @@ const Card = (props) => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

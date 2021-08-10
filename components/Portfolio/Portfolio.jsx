@@ -1,11 +1,9 @@
-import React from "react";
+import React from "react"
 
-import Card from "../Card/Card";
-import style from "./portfolio.module.css";
+import Card from "../Card/Card"
+import style from "./portfolio.module.css"
 
-const Portfolio = (props) => {
-  const { projects } = props;
-
+const Portfolio = ({ projects }) => {
   return (
     <div className={style.container}>
       <div className={style.header}>
@@ -17,7 +15,7 @@ const Portfolio = (props) => {
         </p>
       </div>
       <div className={style.containerCards}>
-        {projects.map((pro) => (
+        {projects.map(pro => (
           <Card
             key={pro.id}
             technologies={pro.technologies}
@@ -28,7 +26,7 @@ const Portfolio = (props) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio

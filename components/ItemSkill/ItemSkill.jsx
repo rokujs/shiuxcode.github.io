@@ -1,14 +1,13 @@
-import React from "react";
+import React from "react"
 
-import style from "./itemSkill.module.css";
+import style from "./itemSkill.module.css"
 
-const ItemSkill = (props) => {
-  const { technology } = props;
+const ItemSkill = ({ technology }) => {
   return (
     <li className={style.item}>
       <span>{technology}</span>
     </li>
-  );
-};
+  )
+}
 
-export default ItemSkill;
+export default ItemSkill

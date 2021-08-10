@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from "react"
+import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
-import style from "./header.module.css";
+import style from "./header.module.css"
 
 const Header = () => {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(false)
 
   const handleMenu = () => {
-    setMenu(!menu);
-    const container = document.getElementById("menu_container");
+    setMenu(!menu)
+    const container = document.getElementById("menu_container")
 
-    container.style.display = menu ? "none" : "flex";
-  };
+    container.style.display = menu ? "none" : "flex"
+  }
 
   return (
     <>
@@ -27,24 +27,24 @@ const Header = () => {
         </button>
       </div>
 
-      <div id="menu_container" className={style.container}>
+      <div id='menu_container' className={style.container}>
         <nav className={style.menu}>
-          <Link href="/">
+          <Link href='/'>
             <a>
               <div>About</div>
             </a>
           </Link>
-          <Link href="/contact">
+          <Link href='/contact'>
             <a>
               <div>Contact</div>
             </a>
           </Link>
-          <Link href="/skills">
+          <Link href='/skills'>
             <a>
               <div>Skills</div>
             </a>
           </Link>
-          <Link href="/projects">
+          <Link href='/projects'>
             <a>
               <div>Works</div>
             </a>
@@ -52,7 +52,7 @@ const Header = () => {
         </nav>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
