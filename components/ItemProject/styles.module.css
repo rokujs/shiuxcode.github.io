@@ -62,7 +62,7 @@
 
 .description {
   padding: 1.5rem;
-  background-color: #807673;
+  background-color: var(--color-bg-text);
   border-radius: 10px;
 }
 

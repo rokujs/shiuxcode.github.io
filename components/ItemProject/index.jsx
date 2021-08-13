@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import Item from "../ItemSkill"
-import style from "./styles.module.css"
+import Item from '../ItemSkill'
+import style from './styles.module.css'
 
 const ItemProject = ({ title, image, url, tech, description, codeUrl }) => {
   return (
@@ -13,14 +13,14 @@ const ItemProject = ({ title, image, url, tech, description, codeUrl }) => {
       </div>
 
       <div>
-        <a href={url} target='_blank' className={style.btn}>
+        <a href={url} target='_blank' className={style.btn} rel="noreferrer">
           <div className={style.btn_container}>
             <span className={style.btn__text}>Link</span>
           </div>
         </a>
 
         {codeUrl && (
-          <a href={codeUrl} target='_blank' className={style.btn}>
+          <a href={codeUrl} target='_blank' className={style.btn} rel="noreferrer">
             <div className={style.btn_container}>
               <span className={style.btn__code}>Code</span>
             </div>

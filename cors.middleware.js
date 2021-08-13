@@ -1,21 +1,21 @@
-import corsWrapper from "cors";
+import corsWrapper from 'cors'
 
 const CORS_OPTIONS = {
-  methods: ["GET", "OPTIONS"],
-};
+  methods: ['GET', 'OPTIONS']
+}
 
-function promisifyMiddleware(middleware) {
+function promisifyMiddleware (middleware) {
   return (req, res) =>
     new Promise((resolve, reject) => {
       middleware(req, res, (result) => {
         if (result instanceof Error) {
-          return reject(result);
+          return reject(result)
         }
-        return resolve(result);
-      });
-    });
+        return resolve(result)
+      })
+    })
 }
 
-const cors = promisifyMiddleware(corsWrapper(CORS_OPTIONS));
+const cors = promisifyMiddleware(corsWrapper(CORS_OPTIONS))
 
-export default cors;
+export default cors

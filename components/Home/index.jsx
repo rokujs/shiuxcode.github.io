@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import style from "./styles.module.css";
+import style from './styles.module.css'
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
         Soy un game developer / front-end developer.
       </h3>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

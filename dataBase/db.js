@@ -1,21 +1,19 @@
-import allData from "./data";
+import allData from './data'
 
 class Database {
-  constructor() {}
-
-  getAll() {
-    const data = Object.values(allData);
-    return data;
+  getAll () {
+    const data = Object.values(allData)
+    return data
   }
 
-  getById(id) {
+  getById (id) {
     if (!Object.prototype.hasOwnProperty.call(allData, id)) {
-      return null;
+      return null
     }
 
-    const entry = allData[id];
-    return entry;
+    const entry = allData[id]
+    return entry
   }
 }
 
-export default Database;
+export default Database
