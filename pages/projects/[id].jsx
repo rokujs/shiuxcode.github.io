@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import Head from "next/head";
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Head from 'next/head'
 
-import ItemProject from "../../components/ItemProject/";
-import Layout from "../../components/Layout";
+import ItemProject from 'components/ItemProject/'
+import Layout from 'components/Layout'
 
 const ProjectPage = () => {
-  const { query } = useRouter();
-  const [project, setProject] = useState(null);
+  const { query } = useRouter()
+  const [project, setProject] = useState(null)
 
   useEffect(() => {
     if (query.id) {
       window
         .fetch(`/api/projects/${query.id}`)
         .then((res) => res.json())
-        .then((data) => setProject(data));
+        .then((data) => setProject(data))
     }
-  }, [query.id]);
+  }, [query.id])
 
   return (
     <Layout>
@@ -36,7 +36,7 @@ const ProjectPage = () => {
         </>
       )}
     </Layout>
-  );
-};
+  )
+}
 
-export default ProjectPage;
+export default ProjectPage

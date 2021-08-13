@@ -1,8 +1,8 @@
-import React from "react";
-import Head from "next/head";
+import React from 'react'
+import Head from 'next/head'
 
-import Layout from "../components/Layout";
-import Soon from "../components/Soon";
+import Layout from 'components/Layout'
+import Soon from 'components/Soon'
 
 const skills = () => {
   return (
@@ -16,7 +16,7 @@ const skills = () => {
         <Soon />
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default skills;
+export default skills
