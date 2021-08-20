@@ -1,8 +1,7 @@
-import React from 'react'
 import Head from 'next/head'
 
 import Layout from 'components/Layout'
-import Form from 'components/Form'
+import Contact from 'components/Contact'
 
 function contact () {
   return (
@@ -10,7 +9,7 @@ function contact () {
       <Head>
         <title>Contact</title>
       </Head>
-      <Form />
+      <Contact/>
     </Layout>
   )
 }

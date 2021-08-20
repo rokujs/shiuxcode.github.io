@@ -2,8 +2,10 @@
   --color-primary: #e6fffb;
   --color-secondary: #73807d;
   --color-bg: #454d4b;
-  --color-purple: #8F9AB3;
+  --color-purple: #8f9ab3;
   --color-bg-text: #807673;
+  --color-bg-error: #804041;
+  --color-error: #ffcccd;
 }
 
 * {

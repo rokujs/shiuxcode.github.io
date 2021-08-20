@@ -1,0 +1,22 @@
+.container {
+  margin-top: 6rem;
+}
+
+.container > span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-purple);
+}
+
+.container > button {
+  margin: 3rem auto;
+  display: block;
+  border-radius: 999px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1.4rem 2rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-purple);
+  color: var(--color-primary);
+}

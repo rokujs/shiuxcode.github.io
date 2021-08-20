@@ -1,57 +1,97 @@
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './styles.module.css'
+import Loading from 'components/Loading'
 
-function Form () {
-  const { handleSubmit, register } = useForm()
+function Form ({ onClose }) {
+  const [isLoading, setIsLoading] = useState(false)
+  const {
+    handleSubmit,
+    register,
+    formState: { errors }
+  } = useForm()
 
   const onSubmit = data => {
-    console.log(JSON.stringify(data))
+    setIsLoading(true)
+    fetch('https://ancient-thicket-10868.herokuapp.com/message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(() => {
+        onClose(true)
+      })
+      .catch(err => {
+        setIsLoading(false)
+        console.error(err)
+      })
   }
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Ponte en contacto</h1>
-      <h3 className={styles.subtitle}>
-        Si quieres ponerte en contacto, hablarme para participar en un projecto
-        o simplemente saludar, mandame un mensaje llenando el siguiente
-        formulario o mandame un mensaje a mí cuenta de twitter @rokujs y
-        hablamos 😁
-      </h3>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className={styles.input}>
-          <label>
-            <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-            <input
-              className={styles.email}
-              type='email'
-              placeholder='Email'
-              {...register('email')}
-            />
-          </label>
-        </div>
-        <div className={styles.input}>
-          <label>
-            <FontAwesomeIcon icon={faUser} className={styles.icon} />
-            <input
-              className={styles.email}
-              type='text'
-              placeholder='Nombre'
-              {...register('name')}
-            />
-          </label>
-        </div>
+    <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
+      {isLoading && <Loading />}
 
-        <textarea
-          className={styles.message}
-          name='message'
-          {...register('message')}
-          placeholder='Mensage'
-        ></textarea>
-        <button className={styles.submit}>Enviar</button>
-      </form>
-    </div>
+      <div className={errors.email ? styles.inputError : styles.input}>
+        <label>
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            className={errors.email ? styles.iconError : styles.icon}
+          />
+          <input
+            className={errors.email ? styles.emailError : styles.email}
+            type='email'
+            placeholder='Email'
+            {...register('email', { required: true })}
+          />
+        </label>
+      </div>
+
+      <div className={errors.name ? styles.inputError : styles.input}>
+        <label>
+          <FontAwesomeIcon
+            icon={faUser}
+            className={errors.name ? styles.iconError : styles.icon}
+          />
+          <input
+            className={errors.name ? styles.emailError : styles.email}
+            type='text'
+            placeholder='Nombre'
+            {...register('name', { required: true })}
+          />
+        </label>
+      </div>
+
+      <textarea
+        className={styles.message}
+        name='message'
+        {...register('message', { required: true })}
+        placeholder='Mensage'
+      ></textarea>
+
+      <button className={styles.submit}>Enviar</button>
+
+      {errors.email && (
+        <div className={styles.errors}>
+          <span>El email es requerido</span>
+        </div>
+      )}
+
+      {errors.name && (
+        <div className={styles.errors}>
+          <span>El nombre es requerido</span>
+        </div>
+      )}
+
+      {errors.message && (
+        <div className={styles.errors}>
+          <span>El mensaje es requerido</span>
+        </div>
+      )}
+    </form>
   )
 }
 
