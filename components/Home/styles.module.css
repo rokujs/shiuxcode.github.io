@@ -46,7 +46,14 @@
 .description {
   display: inline-block;
   font-size: 2rem;
+  color: var(--color-purple);
+}
+
+.text {
+  font-size: 2rem;
   color: var(--color-secondary);
+  font-weight: 300;
+  line-height: 2.5rem;
 }
 
 /* desktop */
@@ -121,7 +128,11 @@
     display: inline-block;
     margin-left: 150px;
     font-size: 2.4rem;
-    color: var(--color-secondary);
-    padding-bottom: 200px;
+  }
+
+  .text {
+    width: 60rem;
+    margin-left: 12.5rem;
+    margin-top: 3rem;
   }
 }

@@ -17,6 +17,9 @@ const Home = () => {
       <h3 className={style.description}>
         Soy un game developer / front-end developer.
       </h3>
+      <h4 className={style.text}>
+      Ingeniero de artes digitales en formación, con un gran entusiasmo por el aprendizaje autodidacta. Me desempeño como programador Front-end con gusto por aprender de manera profunda y por la resolución de retos mediante la comprensión y análisis. Me desenvuelvo de forma eficaz desarrollando la parte lógica de una plataforma web y del mismo modo, en la creación de algoritmos para videojuegos en 3D y 2D.
+      </h4>
     </div>
   )
 }
