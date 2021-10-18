@@ -49,10 +49,14 @@
   .container {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
-    text-align: end;
-    display: block;
+    justify-content: space-between;
+    display: flex;
     height: auto;
-    padding: 30px 50px 0 0;
+    padding: 3rem 5rem 0 0;
+  }
+
+  .image {
+    margin-left: 5rem;
   }
 
   .container_button {
@@ -61,6 +65,7 @@
 
   .menu {
     font-size: 1.8rem;
+    display: inline-block;
   }
 
   .menu > a {
@@ -71,9 +76,8 @@
     text-decoration: underline;
   }
 
-  .menu > a > div {
-    margin: 0;
-    margin-right: 20px;
+  .menu > a > span {
+    margin-right: 2rem;
     display: inline;
   }
 }
