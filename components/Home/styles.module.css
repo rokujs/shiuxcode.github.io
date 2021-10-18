@@ -63,7 +63,6 @@
     grid-area: 2 / 2 / 3 / 3;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
   }
@@ -132,7 +131,7 @@
 
   .text {
     width: 60rem;
-    margin-left: 12.5rem;
-    margin-top: 3rem;
+    margin-left: 30rem;
+    margin-top: 4rem;
   }
 }
