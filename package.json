@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "eslint . --fix"
+    "lint": "eslint --fix --ext .js,.jsx ./components"
   },
   "repository": {
     "type": "git",

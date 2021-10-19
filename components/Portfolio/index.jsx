@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import Card from "../Card"
-import style from "./styles.module.css"
+import Card from '../Card'
+import style from './styles.module.css'
 
 const Portfolio = ({ projects }) => {
   return (

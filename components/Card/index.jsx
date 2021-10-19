@@ -1,11 +1,11 @@
-import React from "react"
-import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExpand } from "@fortawesome/free-solid-svg-icons"
+import React from 'react'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExpand } from '@fortawesome/free-solid-svg-icons'
 // import Image from "next/image";
 
-import style from "./styles.module.css"
-import ItemSkill from "../ItemSkill"
+import style from './styles.module.css'
+import ItemSkill from '../ItemSkill'
 
 const Card = ({ image, title, technologies, id }) => {
   return (

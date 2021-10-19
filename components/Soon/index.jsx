@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import style from "./styles.module.css";
+import style from './styles.module.css'
 
 const Soon = () => {
   return (
@@ -11,7 +11,7 @@ const Soon = () => {
         portfolio
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Soon;
+export default Soon
