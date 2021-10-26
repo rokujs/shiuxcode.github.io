@@ -2,7 +2,8 @@
   grid-column: 1 / 4;
   grid-row: 1 / 4;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   height: 100vh;
@@ -32,16 +33,16 @@
 
 .menu {
   font-size: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu > a {
+  margin-bottom: 5rem;
   text-decoration: none;
   color: var(--color-secondary);
 }
 
-.menu > a > div {
-  margin: 5rem 0;
-}
 
 /* Desktop */
 
@@ -51,6 +52,7 @@
     grid-row: 1 / 2;
     justify-content: space-between;
     display: flex;
+    flex-direction: row;
     height: auto;
     padding: 3rem 5rem 0 0;
   }
