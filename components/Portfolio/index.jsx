@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Card from '../Card'
 import style from './styles.module.css'
 

@@ -39,7 +39,10 @@
     width: 100%;
     justify-self: stretch;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 5rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+
   }
 
   .header {
@@ -57,7 +60,7 @@
   .containerCards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 50px 4vw;
     align-items: center;
   }
