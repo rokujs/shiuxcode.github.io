@@ -1,5 +1,5 @@
 .container {
-  width: 50rem;
+  width: 80vw;
   margin: auto;
 }
 
@@ -17,7 +17,7 @@
 .email {
   padding: 2rem 2rem 1rem 2rem;
   border: none;
-  width: 95%;
+  width: 90%;
   font-weight: 900;
   font-size: 1.8rem;
   background-color: var(--color-bg);
@@ -86,7 +86,7 @@
 .emailError {
   padding: 2rem 2rem 1rem 2rem;
   border: none;
-  width: 95%;
+  width: 90%;
   font-weight: 900;
   font-size: 1.8rem;
   background-color: var(--color-bg);
@@ -114,4 +114,19 @@
   font-size: 1.4rem;
   font-weight: bold;
   color: var(--color-bg-error);
+}
+/* desktop */
+
+@media (min-width: 768px) {
+  .container {
+    width: 50rem;
+  }
+
+  .email {
+    width: 95%;
+  }
+
+  .emailError {
+    width: 95%;
+  }
 }

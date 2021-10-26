@@ -4,11 +4,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 5rem 50rem;
+  padding: 1rem 3rem;
 }
 
 .title {
   font-size: 4rem;
+  text-align: center;
   font-weight: 900;
   color: var(--color-primary);
 }
@@ -23,4 +24,12 @@
 
 .subtitle > b {
   color: var(--color-primary);
+}
+
+/* desktop */
+
+@media (min-width: 800px) {
+  .container {
+    padding: 5rem 50rem;
+  }
 }
