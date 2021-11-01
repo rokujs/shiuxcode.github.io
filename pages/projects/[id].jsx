@@ -27,7 +27,7 @@ const ProjectPage = () => {
           </Head>
           <ItemProject
             title={project.title}
-            image={project.image}
+            images={project.images}
             url={project.link}
             tech={project.technologies}
             description={project.description}

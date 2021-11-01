@@ -2,7 +2,11 @@ const data = {
   0: {
     id: '0',
     title: 'Tic-tac-toe',
-    image: '/img/tic-tac-toe.jpg',
+    images: [
+      '/img/tic-tac-toe.jpg',
+      '/img/bomberman.jpg',
+      '/img/tic-tac-toe.jpg'
+    ],
     technologies: ['HTML', 'JavaScript', 'CSS'],
     link: 'https://rokujs.github.io/tic-tac-toe/',
     code: 'https://github.com/rokujs/tic-tac-toe',
@@ -13,7 +17,11 @@ const data = {
   1: {
     id: '1',
     title: 'Bomberman',
-    image: '/img/bomberman.jpg',
+    images: [
+      '/img/bomberman.jpg',
+      '/img/tic-tac-toe.jpg',
+      '/img/bomberman.jpg'
+    ],
     technologies: ['Unity', 'C#'],
     link: 'https://kuroseiro.itch.io/bomberman/',
     code: '',
