@@ -63,7 +63,7 @@
 .description {
   padding: 1.5rem;
   background-color: var(--color-bg-text);
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .description > p {
@@ -71,10 +71,11 @@
   color: var(--color-primary);
 }
 
+/* Desktop */
 @media (min-width: 800px) {
   .container {
     grid-area: 2 / 2 / 3 / 3;
-    padding: 50px 0 0 0;
+    padding: 5rem 0 0 0;
   }
 
   .title {
@@ -83,11 +84,20 @@
   }
 
   .image {
-    margin: 2.5vh 0;
+    display: block;
+    width: 52vw;
+    margin: 2rem auto;
+    padding: 1vw;
+    border-radius: 2rem;
   }
 
   .image > img {
-    width: 40vw;
+    width: 50vw;
+  }
+
+  .content {
+    padding-right: 20vw;
+    padding-left: 20vw;
   }
 
   .btn_container {
@@ -104,5 +114,9 @@
 
   .skills {
     margin: 1.5rem 2.5rem;
+  }
+
+  .description {
+    padding: 2rem;
   }
 }
