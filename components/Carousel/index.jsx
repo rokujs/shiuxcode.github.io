@@ -52,9 +52,19 @@ function Carousel ({ images, title, color, revColor }) {
 
       <style jsx>{`
         ul {
+          order: 1;
           text-align: center;
           margin: 4vh 0;
         }
+
+        .prev {
+          order: 2;
+        }
+
+        .next{
+          order: 3;
+        }
+
 
         div > button {
           background-color: ${color};
@@ -82,7 +92,12 @@ function Carousel ({ images, title, color, revColor }) {
             margin: 2rem 0;
             padding: 1vw;
             border-radius: 2rem;
+            order: 2
           }
+
+          .prev {
+          order: 1;
+        }
         }
       `}</style>
     </>
