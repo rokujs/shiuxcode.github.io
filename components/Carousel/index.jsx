@@ -53,6 +53,7 @@ function Carousel ({ images, title, color, revColor }) {
       <style jsx>{`
         ul {
           order: 1;
+          width: auto;
           text-align: center;
           margin: 4vh 0;
         }
@@ -61,10 +62,9 @@ function Carousel ({ images, title, color, revColor }) {
           order: 2;
         }
 
-        .next{
+        .next {
           order: 3;
         }
-
 
         div > button {
           background-color: ${color};
@@ -80,7 +80,7 @@ function Carousel ({ images, title, color, revColor }) {
           cursor: pointer;
         }
 
-        {
+         {
           /* Desktop */
         }
 
@@ -88,16 +88,15 @@ function Carousel ({ images, title, color, revColor }) {
           ul {
             background-color: ${color};
             display: block;
-            width: 52vw;
             margin: 2rem 0;
             padding: 1vw;
             border-radius: 2rem;
-            order: 2
+            order: 2;
           }
 
           .prev {
-          order: 1;
-        }
+            order: 1;
+          }
         }
       `}</style>
     </>
