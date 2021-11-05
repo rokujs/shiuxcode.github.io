@@ -18,7 +18,7 @@ function Card ({ images, title, technologies, id }) {
         </Link>
       </div>
       <img
-        src={images[0]}
+        src={images}
         alt={`cover of ${title}`}
         className={style.backgroundImage}
       />
