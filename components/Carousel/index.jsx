@@ -10,8 +10,6 @@ import CarouselItem from 'components/CarouselItem'
 function Carousel ({ images, title, color, revColor }) {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  console.log(activeIndex)
-
   const onClickLeft = () => {
     setActiveIndex(activeIndex - 1)
   }

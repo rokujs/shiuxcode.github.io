@@ -8,6 +8,7 @@ import style from './styles.module.css'
 import ItemSkill from '../ItemSkill'
 
 function Card ({ images, title, technologies, id }) {
+  console.log('img:', images)
   return (
     <div className={style.card}>
       <div className={style.buttonPage}>
@@ -18,7 +19,7 @@ function Card ({ images, title, technologies, id }) {
         </Link>
       </div>
       <img
-        src={images}
+        src={images[0]}
         alt={`cover of ${title}`}
         className={style.backgroundImage}
       />

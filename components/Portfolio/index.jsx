@@ -2,7 +2,6 @@ import Card from 'components/Card'
 import style from './styles.module.css'
 
 function Portfolio ({ projects }) {
-  console.log('prolects: ', projects)
   return (
     <div className={style.container}>
       <div className={style.header}>
@@ -19,7 +18,7 @@ function Portfolio ({ projects }) {
             key={pro.id}
             technologies={pro.technologies}
             title={pro.title}
-            image={pro.images}
+            images={pro.images}
             id={pro.id}
           />
         ))}
