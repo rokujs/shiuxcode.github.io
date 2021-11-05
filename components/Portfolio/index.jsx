@@ -1,7 +1,8 @@
-import Card from '../Card'
+import Card from 'components/Card'
 import style from './styles.module.css'
 
-const Portfolio = ({ projects }) => {
+function Portfolio ({ projects }) {
+  console.log('prolects: ', projects)
   return (
     <div className={style.container}>
       <div className={style.header}>
@@ -18,7 +19,7 @@ const Portfolio = ({ projects }) => {
             key={pro.id}
             technologies={pro.technologies}
             title={pro.title}
-            image={pro.image}
+            image={pro.images}
             id={pro.id}
           />
         ))}

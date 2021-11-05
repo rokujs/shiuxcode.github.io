@@ -3,9 +3,10 @@ const data = {
     id: '0',
     title: 'Tic-tac-toe',
     images: [
-      '/img/tic-tac-toe.jpg',
-      '/img/bomberman.jpg',
-      '/img/tic-tac-toe.jpg'
+      '/img/tic-tac-toe-1.jpeg',
+      '/img/tic-tac-toe-2.jpeg',
+      '/img/tic-tac-toe-3.jpeg',
+      '/img/tic-tac-toe-4.jpeg'
     ],
     technologies: ['HTML', 'JavaScript', 'CSS'],
     link: 'https://rokujs.github.io/tic-tac-toe/',
@@ -18,9 +19,12 @@ const data = {
     id: '1',
     title: 'Bomberman',
     images: [
-      '/img/bomberman.jpg',
-      '/img/tic-tac-toe.jpg',
-      '/img/bomberman.jpg'
+      '/img/bomberman-1.jpeg',
+      '/img/bomberman-2.jpeg',
+      '/img/bomberman-3.jpeg',
+      '/img/bomberman-4.jpeg',
+      '/img/bomberman-5.jpg',
+      '/img/bomberman-6.jpeg'
     ],
     technologies: ['Unity', 'C#'],
     link: 'https://kuroseiro.itch.io/bomberman/',

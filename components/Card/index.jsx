@@ -7,7 +7,7 @@ import { faExpand } from '@fortawesome/free-solid-svg-icons'
 import style from './styles.module.css'
 import ItemSkill from '../ItemSkill'
 
-const Card = ({ image, title, technologies, id }) => {
+function Card ({ images, title, technologies, id }) {
   return (
     <div className={style.card}>
       <div className={style.buttonPage}>
@@ -18,7 +18,7 @@ const Card = ({ image, title, technologies, id }) => {
         </Link>
       </div>
       <img
-        src={image}
+        src={images[0]}
         alt={`cover of ${title}`}
         className={style.backgroundImage}
       />

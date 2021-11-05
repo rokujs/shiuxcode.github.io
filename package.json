@@ -35,8 +35,7 @@
     "next": "^11.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-hook-form": "^7.12.2",
-    "upgrade": "^1.1.0"
+    "react-hook-form": "^7.12.2"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
