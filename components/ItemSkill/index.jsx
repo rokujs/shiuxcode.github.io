@@ -2,7 +2,7 @@ import React from 'react'
 
 import style from './styles.module.css'
 
-const ItemSkill = ({ technology }) => {
+const ItemListSkill = ({ technology }) => {
   return (
     <li className={style.item}>
       <span>{technology}</span>
@@ -10,4 +10,4 @@ const ItemSkill = ({ technology }) => {
   )
 }
 
-export default ItemSkill
+export default ItemListSkill

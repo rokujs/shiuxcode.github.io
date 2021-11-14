@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Layout from 'components/Layout'
-import Soon from 'components/Soon'
+import LayoutSkills from 'components/LayoutSkills'
 
 const skills = () => {
   return (
@@ -10,11 +10,7 @@ const skills = () => {
       <Head>
         <title>Skills</title>
       </Head>
-      <div className="Skills">
-        {/* <h1>Skills</h1>
-        <p>This page will be in 3D</p> */}
-        <Soon />
-      </div>
+      <LayoutSkills />
     </Layout>
   )
 }

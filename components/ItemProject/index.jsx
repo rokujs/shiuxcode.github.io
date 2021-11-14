@@ -2,7 +2,7 @@ import React from 'react'
 
 import Item from 'components/ItemSkill'
 import style from './styles.module.css'
-import { negativeColor } from 'services/negativeColor'
+import { negativeColor } from 'utils/negativeColor'
 import Carousel from 'components/Carousel'
 
 function ItemProject ({
