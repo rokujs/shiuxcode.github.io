@@ -186,13 +186,14 @@ function ListSkills () {
         <div key={category}>
           <h2>{category}</h2>
           <ul>
-            {technologies.map(tech => (
+            {technologies.map((tech, index) => (
               <ItemSkills
                 key={tech.name}
                 name={tech.name}
                 color={tech.color}
                 percentage={tech.percentage}
                 icon={tech.icon}
+                index={index}
               />
             ))}
           </ul>

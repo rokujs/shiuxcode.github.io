@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as iconTech from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 
-function ItemSkills ({ name, percentage, color, icon }) {
+function ItemSkills ({ name, percentage, color, icon, index }) {
   return (
     <>
       <li>
@@ -23,6 +23,12 @@ function ItemSkills ({ name, percentage, color, icon }) {
             border-radius: 0.5rem;
             background-color: var(--color-bg-text);
             margin-bottom: 1rem;
+            animation-name: active-item;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: ${index * 0.15}s;
+            opacity: 0;
+            animation-fill-mode: forwards;
           }
 
           i {
@@ -54,6 +60,17 @@ function ItemSkills ({ name, percentage, color, icon }) {
           }
           ::-webkit-progress-value {
             background-color: ${color};
+          }
+
+          @keyframes active-item {
+            0% {
+              opacity: 0;
+              margin-top: -9rem;
+            }
+            100% {
+              opacity: 1;
+              maring-top: 0;
+            }
           }
         `}
       </style>
