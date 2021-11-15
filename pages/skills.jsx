@@ -1,16 +1,30 @@
 import React from 'react'
 import Head from 'next/head'
+import Fetch from 'isomorphic-unfetch'
 
 import Layout from 'components/Layout'
 import LayoutSkills from 'components/LayoutSkills'
 
-const skills = () => {
+export const getStaticProps = async () => {
+  const res = await Fetch('https://ancient-thicket-10868.herokuapp.com/skills')
+  const errorCode = res.ok ? false : res.statusCode
+  const data = await res.json()
+
+  return {
+    props: {
+      skills: data,
+      error: errorCode
+    }
+  }
+}
+
+function skills ({ skills }) {
   return (
     <Layout>
       <Head>
         <title>Skills</title>
       </Head>
-      <LayoutSkills />
+      <LayoutSkills skills={skills} />
     </Layout>
   )
 }
