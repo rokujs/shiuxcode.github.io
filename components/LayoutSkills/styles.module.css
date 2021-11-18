@@ -18,17 +18,18 @@
 }
 
 .description {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
+  font-weight: 500;
   margin-top: 3.5rem;
-  font-weight: 400;
   line-height: 3rem;
   color: var(--color-secondary);
-  text-align: center;
+  text-align: left;
 }
 
 .main {
   margin: 0 10rem;
   margin-top: 5rem;
+  width: 100%;
 }
 
 /* desktop */
@@ -37,5 +38,9 @@
   .container {
     grid-area: 2 / 2 / 3 / 3;
     padding: 5rem 20rem;
+  }
+
+  .description {
+    text-align: center;
   }
 }

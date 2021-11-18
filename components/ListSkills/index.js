@@ -36,7 +36,15 @@ function ListSkills ({ skills }) {
 
           ul {
             list-style: none;
-            margin-left: 5rem;
+            margin-left: 0;
+          }
+
+          // Desktop
+
+          @media (min-width: 768px) {
+            ul {
+              margin-left: 5rem;
+            }
           }
         `}
       </style>

@@ -7,7 +7,10 @@ function ItemSkills ({ name, percentage, color, icon, index }) {
     <>
       <li>
         <i title={name}>
-          <FontAwesomeIcon icon={iconTech[icon] ?? faDatabase} className='icon' />
+          <FontAwesomeIcon
+            icon={iconTech[icon] ?? faDatabase}
+            className='icon'
+          />
         </i>
         <progress value={percentage} max='100'>
           {percentage + '%'}
@@ -23,12 +26,6 @@ function ItemSkills ({ name, percentage, color, icon, index }) {
             border-radius: 0.5rem;
             background-color: var(--color-bg-text);
             margin-bottom: 1rem;
-            animation-name: active-item;
-            animation-duration: 1s;
-            animation-timing-function: ease-in-out;
-            animation-delay: ${index * 0.15}s;
-            opacity: 0;
-            animation-fill-mode: forwards;
           }
 
           i {
@@ -62,14 +59,27 @@ function ItemSkills ({ name, percentage, color, icon, index }) {
             background-color: ${color};
           }
 
-          @keyframes active-item {
-            0% {
+          // desktop
+
+          @media (min-width: 768px) {
+            li {
+              animation-name: active-item;
+              animation-duration: 1s;
+              animation-timing-function: ease-in-out;
+              animation-delay: ${index * 0.15}s;
               opacity: 0;
-              margin-top: -9rem;
+              animation-fill-mode: forwards;
             }
-            100% {
-              opacity: 1;
-              maring-top: 0;
+
+            @keyframes active-item {
+              0% {
+                opacity: 0;
+                margin-top: -9rem;
+              }
+              100% {
+                opacity: 1;
+                maring-top: 0;
+              }
             }
           }
         `}
