@@ -15,6 +15,8 @@ function ItemProject ({
   colorBg = '#feffff'
 }) {
   const revColor = negativeColor(colorBg)
+
+  console.log('tech', tech)
   return (
     <div className={style.container}>
       <h1 className={style.title}>{title}</h1>

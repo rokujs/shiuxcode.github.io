@@ -8,13 +8,16 @@ import Layout from 'components/Layout'
 const ProjectPage = () => {
   const { query } = useRouter()
   const [project, setProject] = useState(null)
-  console.log(query)
+
   useEffect(() => {
     if (query.id) {
       fetch(`https://ancient-thicket-10868.herokuapp.com/projects/${query.id}`)
-        .then((res) => res.json())
-        .then((data) => setProject(data))
-        .catch((err) => console.error(err))
+        .then(res => res.json())
+        .then(data => {
+          console.log('data: ', data[0])
+          return setProject(data[0])
+        })
+        .catch(err => console.error(err))
     }
   }, [query.id])
 
