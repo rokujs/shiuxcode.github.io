@@ -7,9 +7,9 @@ import Layout from 'components/Layout'
 import Portfolio from 'components/Portfolio'
 
 export const getStaticProps = async () => {
-  const res = await Fetch('https://www.rokujs.me/api/projects/')
+  const res = await Fetch('https://ancient-thicket-10868.herokuapp.com/projects')
   const errorCode = res.ok ? false : res.statusCode
-  const { data } = await res.json()
+  const data = await res.json()
 
   return {
     props: {

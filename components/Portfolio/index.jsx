@@ -15,11 +15,11 @@ function Portfolio ({ projects }) {
       <div className={style.containerCards}>
         {projects.map(pro => (
           <Card
-            key={pro.id}
+            key={pro._id.$oid}
             technologies={pro.technologies}
             title={pro.title}
             images={pro.images}
-            id={pro.id}
+            id={pro._id.$oid}
           />
         ))}
       </div>
