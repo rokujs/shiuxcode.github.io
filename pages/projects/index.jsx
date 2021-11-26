@@ -7,19 +7,39 @@ import Layout from 'components/Layout'
 import Portfolio from 'components/Portfolio'
 
 export const getStaticProps = async () => {
-  const res = await Fetch('https://ancient-thicket-10868.herokuapp.com/projects')
-  const errorCode = res.ok ? false : res.statusCode
-  const data = await res.json()
+  const resProjects = await Fetch(
+    'https://ancient-thicket-10868.herokuapp.com/projects'
+  )
+  const resSkills = await Fetch(
+    'https://ancient-thicket-10868.herokuapp.com/skills'
+  )
+
+  const errorCodeProjects = resProjects.ok ? false : resProjects.statusCode
+  const errorCodeSkills = resSkills.ok ? false : resSkills.statusCode
+
+  const dataProjects = await resProjects.json()
+  const dataSkills = await resSkills.json()
+
+  // Creat technologies array from skills
+  const technologies = dataSkills
+    .map(({ technologies }) =>
+      technologies.map(({ name, color }) => {
+        const data = { name, color }
+        return data
+      })
+    )
+    .reduce((acc, curr) => acc.concat(curr), [])
 
   return {
     props: {
-      projects: data,
-      error: errorCode
+      projects: dataProjects,
+      skills: technologies,
+      error: errorCodeProjects || errorCodeSkills
     }
   }
 }
 
-const projects = ({ projects, error }) => {
+const projects = ({ projects, skills, error }) => {
   if (error) {
     return <Error statusCode={error} />
   }
@@ -29,7 +49,7 @@ const projects = ({ projects, error }) => {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <Portfolio projects={projects} />
+      <Portfolio projects={projects} skills={skills} />
     </Layout>
   )
 }

@@ -1,7 +1,8 @@
 import Card from 'components/Card'
+import Filter from 'components/Filter'
 import style from './styles.module.css'
 
-function Portfolio ({ projects }) {
+function Portfolio ({ projects, skills }) {
   return (
     <div className={style.container}>
       <div className={style.header}>
@@ -11,6 +12,7 @@ function Portfolio ({ projects }) {
           vanilla y Node.js, y para videojuegos uso el motor Unity 3D. Revisa
           mis últimos proyectos.
         </p>
+        <Filter skills={skills} />
       </div>
       <div className={style.containerCards}>
         {projects.map(pro => (

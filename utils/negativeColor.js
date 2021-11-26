@@ -24,3 +24,9 @@ export function negativeColor (color) {
   const arrNegative = arrColor.map(item => hexColor[item])
   return arrNegative.join('')
 }
+
+export function getColor (color) {
+  const result = parseInt(color.slice(1), 16)
+
+  return result > 0xffffff / 2 ? '#000000' : '#ffffff'
+}

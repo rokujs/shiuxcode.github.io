@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as iconTech from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 
-function ItemSkills ({ name, percentage, color, icon, index }) {
+function ItemListSkills ({ name, percentage, color, icon, index }) {
   return (
     <>
       <li>
@@ -88,4 +88,4 @@ function ItemSkills ({ name, percentage, color, icon, index }) {
   )
 }
 
-export default ItemSkills
+export default ItemListSkills
