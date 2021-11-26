@@ -10,15 +10,25 @@ export const getStaticProps = async () => {
   const errorCode = res.ok ? false : res.statusCode
   const data = await res.json()
 
+  console.log(data)
+  const sortedData = data.map(skill => {
+    const sort = skill.technologies.sort((a, b) => (parseInt(a.percentage) > b.percentage) ? -1 : 1)
+    return {
+      ...skill,
+      technologies: sort
+    }
+  })
+
   return {
     props: {
-      skills: data,
+      skills: sortedData,
       error: errorCode
     }
   }
 }
 
 function skills ({ skills }) {
+  console.log(skills)
   return (
     <Layout>
       <Head>

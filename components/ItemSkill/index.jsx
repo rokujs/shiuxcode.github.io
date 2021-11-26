@@ -19,10 +19,11 @@ function ItemSkill ({
           ? (
           <>
             <button onClick={() => onClick(technology)}>{technology}</button>
-{active &&
+            {active && (
               <button onClick={onReset}>
                 <FontAwesomeIcon icon={faTimes} />
-              </button>}
+              </button>
+            )}
           </>
             )
           : (

@@ -1,4 +1,4 @@
-import ItemSkills from 'components/ItemListSkills'
+import ItemListSkills from 'components/ItemListSkills'
 
 function ListSkills ({ skills }) {
   return (
@@ -8,7 +8,7 @@ function ListSkills ({ skills }) {
           <h2>{category}</h2>
           <ul>
             {technologies.map((tech, index) => (
-              <ItemSkills
+              <ItemListSkills
                 key={tech.name}
                 name={tech.name}
                 color={tech.color}
