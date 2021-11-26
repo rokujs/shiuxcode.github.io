@@ -1,4 +1,5 @@
 .item {
+  display: inherit;
   background-color: var(--color-secondary);
   padding: 5px;
   border-radius: 5px;

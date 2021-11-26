@@ -1,8 +1,12 @@
+import { useState } from 'react'
+
 import Card from 'components/Card'
 import Filter from 'components/Filter'
 import style from './styles.module.css'
 
 function Portfolio ({ projects, skills }) {
+  const [filter, setFilter] = useState(projects)
+
   return (
     <div className={style.container}>
       <div className={style.header}>
@@ -12,10 +16,10 @@ function Portfolio ({ projects, skills }) {
           vanilla y Node.js, y para videojuegos uso el motor Unity 3D. Revisa
           mis últimos proyectos.
         </p>
-        <Filter skills={skills} />
+        <Filter skills={skills} setFilter={setFilter} projects={projects} />
       </div>
       <div className={style.containerCards}>
-        {projects.map(pro => (
+        {filter.map(pro => (
           <Card
             key={pro._id.$oid}
             technologies={pro.technologies}

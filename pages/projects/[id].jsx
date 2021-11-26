@@ -13,10 +13,7 @@ const ProjectPage = () => {
     if (query.id) {
       fetch(`https://ancient-thicket-10868.herokuapp.com/projects/${query.id}`)
         .then(res => res.json())
-        .then(data => {
-          console.log('data: ', data[0])
-          return setProject(data[0])
-        })
+        .then(data => setProject(data[0]))
         .catch(err => console.error(err))
     }
   }, [query.id])

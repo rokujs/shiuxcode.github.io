@@ -1,9 +1,20 @@
+import { useState } from 'react'
+
 import ItemSkills from 'components/ItemSkill'
 import { getColor } from 'utils/negativeColor'
 
-function Filter ({ skills }) {
-  const onClick = e => {
-    console.log(e)
+function Filter ({ skills, setFilter, projects }) {
+  const [filter, setFilterState] = useState('')
+
+  const applyFilter = (name) => {
+    const newFilter = projects.filter(pro => pro.technologies.some((item) => item === name))
+    setFilter(newFilter)
+    setFilterState(name)
+  }
+
+  const resetFilter = () => {
+    setFilter(projects)
+    setFilterState('')
   }
   return (
     <>
@@ -16,7 +27,9 @@ function Filter ({ skills }) {
               technology={name}
               color={color}
               negativeColor={negative}
-              onClick={onClick}
+              onClick={applyFilter}
+              onReset={resetFilter}
+              active={filter === name}
               button
             />
           )
@@ -27,7 +40,18 @@ function Filter ({ skills }) {
           list-style: none;
           padding: 0;
           display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+          margin: 6rem;
+          margin-bottom: 0;
           gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+          ul {
+            margin: 0;
+          }
         }
       `}</style>
     </>
