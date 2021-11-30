@@ -6,8 +6,10 @@ import { getColor } from 'utils/negativeColor'
 function Filter ({ skills, setFilter, projects }) {
   const [filter, setFilterState] = useState('')
 
-  const applyFilter = (name) => {
-    const newFilter = projects.filter(pro => pro.technologies.some((item) => item === name))
+  const applyFilter = name => {
+    const newFilter = projects.filter(pro =>
+      pro.technologies.some(item => item.toLowerCase() === name.toLowerCase())
+    )
     setFilter(newFilter)
     setFilterState(name)
   }
