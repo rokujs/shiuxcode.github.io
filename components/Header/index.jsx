@@ -47,11 +47,6 @@ const Header = () => {
               <span>Contact</span>
             </a>
           </Link>
-          <Link href='/skills'>
-            <a>
-              <span>Skills</span>
-            </a>
-          </Link>
           <Link href='/projects'>
             <a>
               <span>Works</span>
