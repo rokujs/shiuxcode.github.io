@@ -39,17 +39,17 @@ const Header = () => {
         <nav className={style.menu}>
           <Link href='/'>
             <a>
-              <span>About</span>
+              <span>Sobre mi</span>
             </a>
           </Link>
           <Link href='/contact'>
             <a>
-              <span>Contact</span>
+              <span>Contacto</span>
             </a>
           </Link>
           <Link href='/projects'>
             <a>
-              <span>Works</span>
+              <span>Trabajos</span>
             </a>
           </Link>
         </nav>
