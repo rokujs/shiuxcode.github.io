@@ -6,8 +6,26 @@
   z-index: 1;
 }
 
+.header {
+  background-color: red;
+  position: relative;
+}
+
+.title {
+  background-color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0 1rem 0 2rem;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.title>h3 {
+  font-size: 2rem;
+}
+
 .buttonPage {
-  background-color: #454d4b88;
+  background-color: #454d4bce;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +35,14 @@
   font-size: 3rem;
   padding: 8px;
   border-radius: 10px;
+  position: absolute;
+  z-index: 2;
 }
 
-.buttonPage > a {
+.buttonPage>a {
   text-decoration: none;
   width: 40px;
-  color: var(--color-primary);
+  color: var(--color-purple);
 }
 
 .backgroundImage {
@@ -36,9 +56,16 @@
   border-radius: 0.5rem;
 }
 
+.card:hover>.description {
+  display: flex;
+  animation-name: description;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
 .description {
-  background: var(--color-primary);
-  background: linear-gradient(#e6fffba2 0%, var(--color-primary) 80%);
+  display: none;
+  background-color: #e6fffbd7;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -46,14 +73,13 @@
   height: 10rem;
   padding: 1rem;
   border-radius: 0 0 0.5rem 0.5rem;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .title {
   font-size: 2rem;
-  color: var(--color-secondary);
+  color: var(--color-purple);
   text-align: left;
 }
 
@@ -73,13 +99,13 @@
 
   .buttonPage:hover {
     animation-name: buttonCover;
-    animation-duration: 1s;
+    animation-duration: 0.6s;
     animation-fill-mode: forwards;
   }
 
-  .buttonPage:hover > a {
+  .buttonPage:hover>a {
     animation-name: iconCover;
-    animation-duration: 1s;
+    animation-duration: 0.6s;
     animation-fill-mode: forwards;
   }
 
@@ -92,10 +118,6 @@
     border-radius: 0 0 1rem 1rem;
   }
 
-  .title {
-    font-size: 2.2rem;
-  }
-
   @keyframes buttonCover {
     0% {
       margin: 5px;
@@ -103,6 +125,7 @@
       height: 40px;
       padding: 8px;
     }
+
     100% {
       margin: 0;
       width: 45rem;
@@ -115,10 +138,22 @@
       width: 40px;
       font-size: 3rem;
     }
+
     100% {
       width: 30vw;
       padding: 13vw;
       font-size: 8rem;
+    }
+  }
+  @keyframes description {
+    0% {
+      bottom: -2rem;
+      opacity: 0.1;
+    }
+
+    100% {
+      bottom: 0;
+      opacity: 1;
     }
   }
 }

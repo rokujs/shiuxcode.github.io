@@ -10,20 +10,24 @@ import ItemSkill from '../ItemSkill'
 function Card ({ images, title, technologies, id }) {
   return (
     <div className={style.card}>
-      <div className={style.buttonPage}>
-        <Link href={`/projects/${id}`}>
-          <a>
-            <FontAwesomeIcon icon={faExpand} />
-          </a>
-        </Link>
-      </div>
+      <header className={style.header}>
+        <div className={style.buttonPage}>
+          <Link href={`/projects/${id}`}>
+            <a>
+              <FontAwesomeIcon icon={faExpand} />
+            </a>
+          </Link>
+        </div>
+        <div className={style.title}>
+          <h3>{title}</h3>
+        </div>
+      </header>
       <img
         src={images[0]}
         alt={`cover of ${title}`}
         className={style.backgroundImage}
       />
       <div className={style.description}>
-        <h3 className={style.title}>{title}</h3>
         <ul className={style.skills}>
           {technologies.map((tech, id) => (
             <ItemSkill technology={tech} key={id} />
