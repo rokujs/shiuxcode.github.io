@@ -20,6 +20,11 @@ export const getStaticProps = async () => {
   const dataProjects = await resProjects.json()
   const dataSkills = await resSkills.json()
 
+  const listTechnologies = dataProjects
+    .map(({ technologies }) => technologies)
+    .reduce((acc, curr) => acc.concat(curr), [])
+  const listWithoutDuplicates = [...new Set(listTechnologies)]
+
   // Creat technologies array from skills
   const technologies = dataSkills
     .map(({ technologies }) =>
@@ -29,6 +34,7 @@ export const getStaticProps = async () => {
       })
     )
     .reduce((acc, curr) => acc.concat(curr), [])
+    .filter(tech => listWithoutDuplicates.includes(tech.name))
 
   return {
     props: {
