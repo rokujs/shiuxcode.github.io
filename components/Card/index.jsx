@@ -12,7 +12,7 @@ function Card ({ images, title, technologies, id }) {
     <div className={style.card}>
       <header className={style.header}>
         <div className={style.buttonPage}>
-          <Link href={`/projects/${id}`}>
+          <Link href={{ pathname: `/projects/${id}`, query: { name: title } }}>
             <a>
               <FontAwesomeIcon icon={faExpand} />
             </a>

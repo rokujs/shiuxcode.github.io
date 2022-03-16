@@ -28,7 +28,13 @@
 
 /* desktop */
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
+  .container {
+    padding: 5rem;
+  }
+}
+
+@media (min-width: 1440px) {
   .container {
     padding: 5rem 50rem;
   }

@@ -1,0 +1,16 @@
+.contentLoading {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10rem 0;
+}
+
+.titleLoading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}

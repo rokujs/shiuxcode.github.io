@@ -4,19 +4,40 @@ import { useRouter } from 'next/router'
 
 import ItemProject from 'components/ItemProject/'
 import Layout from 'components/Layout'
+import Loading from 'components/Loading'
+
+import styles from './styles.module.css'
 
 const ProjectPage = () => {
   const { query } = useRouter()
   const [project, setProject] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     if (query.id) {
       fetch(`https://ancient-thicket-10868.herokuapp.com/projects/${query.id}`)
         .then(res => res.json())
-        .then(data => setProject(data[0]))
+        .then(data => {
+          setProject(data[0])
+          setIsLoading(false)
+        })
         .catch(err => console.error(err))
     }
   }, [query.id])
+
+  if (isLoading) {
+    return (
+      <>
+          <Head>
+            <title>{query.name ? query.name : 'rokujs'}</title>
+          </Head>
+          <div className={styles.contentLoading}>
+            <h1 className={styles.titleLoading}>{query.name ? query.name : 'loading'}</h1>
+            <Loading />
+          </div>
+        </>
+    )
+  }
 
   return (
     <Layout>
