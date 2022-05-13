@@ -9,13 +9,13 @@ function ItemSkill ({
   negativeColor,
   onClick,
   onReset,
-  button,
+  isButton,
   active
 }) {
   return (
     <>
       <li className={style.item}>
-        {button
+        {isButton
           ? (
           <>
             <button onClick={() => onClick(technology)}>{technology}</button>

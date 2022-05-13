@@ -6,6 +6,8 @@ import ItemProject from 'components/ItemProject/'
 import Layout from 'components/Layout'
 import Loading from 'components/Loading'
 
+import getProject from 'services/getProject'
+
 import styles from './styles.module.css'
 
 const ProjectPage = () => {
@@ -15,8 +17,7 @@ const ProjectPage = () => {
 
   useEffect(() => {
     if (query.id) {
-      fetch(`https://ancient-thicket-10868.herokuapp.com/projects/${query.id}`)
-        .then(res => res.json())
+      getProject(query.id)
         .then(data => {
           setProject(data[0])
           setIsLoading(false)

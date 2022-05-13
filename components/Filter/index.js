@@ -32,7 +32,7 @@ function Filter ({ skills, setFilter, projects }) {
               onClick={applyFilter}
               onReset={resetFilter}
               active={filter === name}
-              button
+              isButton
             />
           )
         })}

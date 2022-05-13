@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={style.container_button}>
+      <header className={style.container_button}>
         <button onClick={handleMenu} className={style.button}>
           {menu
             ? (
@@ -28,9 +28,9 @@ const Header = () => {
             <FontAwesomeIcon icon={faBars} className={style.icon} />
               )}
         </button>
-      </div>
+      </header>
 
-      <div id='menu_container' className={style.container}>
+      <header id='menu_container' className={style.container}>
         <Link href='/'>
           <a className={style.image}>
             <Image src='/logo.svg' height={100} width={100} />
@@ -53,7 +53,7 @@ const Header = () => {
             </a>
           </Link>
         </nav>
-      </div>
+      </header>
     </>
   )
 }

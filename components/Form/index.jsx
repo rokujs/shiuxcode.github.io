@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons'
 
+import postMessage from 'services/postMessage'
+
 import styles from './styles.module.css'
 import Loading from 'components/Loading'
 
@@ -16,13 +18,7 @@ function Form ({ onClose }) {
 
   const onSubmit = data => {
     setIsLoading(true)
-    fetch('https://ancient-thicket-10868.herokuapp.com/message', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
+    postMessage(data)
       .then(() => {
         onClose(true)
       })

@@ -17,7 +17,7 @@ function ItemProject ({
   const revColor = negativeColor(colorBg)
 
   return (
-    <div className={style.container}>
+    <main className={style.container}>
       <h1 className={style.title}>{title}</h1>
 
       <div className={style.carousel}>
@@ -59,11 +59,11 @@ function ItemProject ({
           </ul>
         </div>
 
-        <div className={style.description}>
+        <section className={style.description}>
           <p>{description}</p>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   )
 }
 

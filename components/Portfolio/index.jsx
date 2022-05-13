@@ -8,7 +8,7 @@ function Portfolio ({ projects, skills }) {
   const [filter, setFilter] = useState(projects)
 
   return (
-    <div className={style.container}>
+    <main className={style.container}>
       <div className={style.header}>
         <h1 className={style.title}>Portfolio</h1>
         <p className={style.description}>
@@ -29,7 +29,7 @@ function Portfolio ({ projects, skills }) {
           />
         ))}
       </div>
-    </div>
+    </main>
   )
 }
 
